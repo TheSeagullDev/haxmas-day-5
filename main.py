@@ -12,7 +12,7 @@ app = flask.Flask(
 limiter = Limiter(
     get_remote_address,
     app=app,
-    default_limits=["200 per day"]
+    default_limits=["200 per day"],
     storage_uri="memory://",
 )
 
