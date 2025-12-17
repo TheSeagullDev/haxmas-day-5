@@ -9,6 +9,7 @@ async function loadGifts() {
 
 	gifts.forEach(gift => {
 		const item = document.createElement("p");
+		item.classList.add("text-lg", "bg-blue-400", "p-4", "m-2", "text-blue-50", "hover:scale-110", "transition", "rounded-md")
 		item.textContent = `Gift for ${gift.name}: ${gift.gift}`;
 		giftsContainer.appendChild(item);
 	});
@@ -32,3 +33,4 @@ form.addEventListener("submit", async (e) => {
 	await loadGifts();
 });
 
+loadGifts();
